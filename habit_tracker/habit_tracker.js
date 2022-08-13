@@ -1,4 +1,4 @@
-/*credit https://github.com/pyrochlore/obsidian-tracker/blob/master/examples/TestCalendar.md */
+/*credit https://github.com/adamhl8/dataviewjs-habit-tracker */
 
 const habits = [] // Array of objects for each page's tasks.
 const defaultHeaders = ["Day"]
