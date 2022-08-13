@@ -1,18 +1,6 @@
----
-title:  Habit Tracker Walkthrough
-author: Relkion
-created: 2022-08-12 05:16
-modified: 2022-08-12 05:54
-aliases: []
-universe: reality
-type: guide
-category: walkthrough
-tags: []
-status: 🌳
-priority: ✅
----
+# Habit Tracker Walkthrough
 
-# [[Habit Tracker Walkthrough]]
+![](habit_tracker.png)
 
 ## Requirements
 
@@ -22,7 +10,7 @@ priority: ✅
 
 Scripts:
 - [pseudometa hack](https://discord.com/channels/686053708261228577/744933215063638183/1006683032293490760) : the emoji from tasks is from here.
-- [pyrochlore/obsidian-tracker · GitHub](https://github.com/pyrochlore/obsidian-tracker/blob/master/examples/TestCalendar.md) : the habit tracker script is
+- [Habit Tracker](https://github.com/adamhl8/dataviewjs-habit-tracker) : the habit tracker script
 
 ### For Aethetics
 
@@ -32,43 +20,9 @@ Scripts:
 
 ## The Template
 
+[Template](habit_tracker_template.md)
+
 Put this wherever in your daily notes and it should work as long as your date format is YYYY-MM-DD. You can rename the header and add or subtract as many habits as you like as long as they have `%% config %%` at the end. You can also place your habit checkboxes wherever in your note if you want to go that route.
-
-%%Template starts here%%
-## 🌟 Daily Trackers
-
-> [!multi-column]
->
->> [!track-box]
->> - [ ] Coffee %% config %%
->> - [ ] Chores %% config %%
->> - [ ] Walk %% config %%
->
->> [!track-box]
->> - [ ] Read %% config %%
->> - [ ] Write %% config %%
->> - [ ] Note %% config %%
->
->> [!track-box]
->> - [ ] Play %% config %%
->> - [ ] Nap %% config %%
->> - [ ] Vitamin %% config %%
->
->> [!track-tog]
->> ![image|100](https://cdn-icons-png.flaticon.com/512/2608/2608888.png)
->> 
-
-> [!track-tog]
-> ```dataviewjs
-> dv.view("⼼The Underside/996 Scripts/Dataview Scripts/tracker_toggles", "")
->```
-
-> [!table] Last 7 Days
->```dataviewjs
-> dv.view("⼼The Underside/996 Scripts/Dataview Scripts/habit_tracker", "")
->```
-
-%%Template ends here%%
 
 ## Breaking it Down
 ### CSS
@@ -77,7 +31,6 @@ Put this wherever in your daily notes and it should work as long as your date fo
 2. For the `[!track-box]` and `[!track-tog]` callouts, use the following CSS saved in a snippet. Its purpose is to have the checkbox columns aligned more aesthetically and style the emoji bar with enlarged icons respectively.
 
 ```css
-
 div[data-callout="track-box"].callout, div[data-callout="track-box"].callout > .callout-content {
 	border: 0 !important;
 	margin: 0;
@@ -96,8 +49,8 @@ div[data-callout="track-tog"].callout, div[data-callout="track-tog"].callout > .
 	font-size: 18px;
 }
 div[data-callout="track-tog"].callout > .callout-title { display: none; }
-
 ```
+
  [Noto Emoji](https://fonts.google.com/noto/specimen/Noto+Emoji) : in your yaml, add `periodic-note` to cssclass and save this as a snippet. It should also work lumped with the previous css in one file.
 
 ```css
@@ -214,7 +167,6 @@ replacedHeaders.add(replacedHeader)
 
 dv.table(replacedHeaders, rows)
 ```
-
 ---
 
 Have fun!
