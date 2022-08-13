@@ -1,0 +1,23 @@
+.periodic-note {
+	--font-text: var(--font-text-override), var(--font-text-theme), var(--custom-emoji-font), var(--font-default);
+
+}
+
+div[data-callout="track-box"].callout, div[data-callout="track-box"].callout > .callout-content {
+	border: 0 !important;
+	margin: 0;
+	padding: 0;
+	background: unset !important;
+	align-self: center;
+}
+div[data-callout="track-box"].callout > .callout-title { display: none; }
+
+div[data-callout="track-tog"].callout, div[data-callout="track-tog"].callout > .callout-content {
+	border: 0 !important;
+	margin: 0;
+	padding: 0;
+	background: unset !important;
+	text-align: center;
+	font-size: 18px;
+}
+div[data-callout="track-tog"].callout > .callout-title { display: none; }
